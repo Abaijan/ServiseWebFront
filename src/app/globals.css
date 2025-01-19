@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-family: "Playwrite Viet Nam";
+    src: url("/fonts/Playwrite_VN/PlaywriteVN-VariableFont_wght.ttf") format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body{
+    font-family: "Playwrite Viet Nam", sans-serif;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.header{
+    background: rgb(245,195,18);
+    background: linear-gradient(90deg, rgb(165, 151, 102) 0%, rgba(231,169,104,1) 49%, rgba(255,121,0,0.8421962535014006) 100%);
+    color: white;
+    font-weight: bold;
+}
+@layer components{
+    .container{
+        @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8
+    }
 }

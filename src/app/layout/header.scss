@@ -1,0 +1,17 @@
+ul li{
+    cursor: pointer;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: wheat;
+        transition: width 0.5s ease-in-out;
+    }
+    &:hover::after{
+        width: 30%;
+    }
+}

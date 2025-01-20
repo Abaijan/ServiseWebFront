@@ -7,7 +7,7 @@ export const Header = () => {
         <section className="bg-black text-center p-[10px] h-[2vh">
             <p className="text-white text-[12px]">Free shipping on all orders over $50</p>
         </section>
-        <header className="header   top-0 sticky ">
+        <header className="header top-0 sticky ">
             <nav className="container">
                 <ul className='grid grid-cols-5  items-center justify-around  p-[20px]'>
                    <Link href="/">

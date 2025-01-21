@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono, Playwrite_VN} from "next/font/google";
 import "./globals.css";
 import {Header} from "@/app/layout/header";
+import React from "react";
 
 
 export const metadata: Metadata = {

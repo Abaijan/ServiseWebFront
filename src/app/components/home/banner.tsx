@@ -21,7 +21,6 @@ export function Banner() {
                             x: 0,
                         }
                     }
-
                 }
                             transition={{duration: 1.2}}
                             viewport={{once: true, amount: 0.5}}

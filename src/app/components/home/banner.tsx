@@ -8,7 +8,7 @@ export function Banner() {
 
     return (
         <section className="w-full">
-            <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center h-[100vh]">
+            <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center h-[800px]">
                 <section>
                 <motion.div variants={
                     {
@@ -77,11 +77,11 @@ export function Banner() {
                             viewport={{once: true, amount: 0.5}}
                         >
                             <Image
-                                className="absolute left-[20%]"
+                                className="hover:scale-110 hover:transition hover:ease-out  hover:duration-700 duration-1000 absolute left-[20%]"
                                 src="/images/home/slide1.svg"
                                 alt="Banner slide 1"
-                                width={600}
-                                height={300}
+                                width={500}
+                                height={200}
                                 layout="intrinsic"
                             />
                         </motion.div>
@@ -98,11 +98,11 @@ export function Banner() {
                                     }} viewport={{once: true, amount: 0.5}}>
 
                             <Image
-                                className="absolute top-20 z-10"
+                                className="hover:scale-110 hover:transition hover:ease-out hover:duration-700 duration-1000 absolute top-20 z-10"
                                 src="/images/home/slide2.svg"
                                 alt="Banner slide 2"
-                                width={600}
-                                height={300}
+                                width={500}
+                                height={200}
                                 layout="intrinsic"
                             />
                         </motion.div>

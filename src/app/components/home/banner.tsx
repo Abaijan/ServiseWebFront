@@ -82,7 +82,6 @@ export function Banner() {
                                 alt="Banner slide 1"
                                 width={500}
                                 height={200}
-                                layout="intrinsic"
                             />
                         </motion.div>
                         <motion.div transition={{duration: 1.4}} initial="hidden" whileInView="show" exit="hidden"
@@ -103,7 +102,6 @@ export function Banner() {
                                 alt="Banner slide 2"
                                 width={500}
                                 height={200}
-                                layout="intrinsic"
                             />
                         </motion.div>
                     </section>

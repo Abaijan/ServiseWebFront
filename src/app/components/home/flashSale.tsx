@@ -57,23 +57,27 @@ export default function FlashSale() {
                    <h3 className=" ml-10 text-[30px] my-0 mt-auto">Discounts up to 70%!</h3>
                </div>
            </motion.div>
-            <div className="flex gap-5 my-[30px]">
+            <div className="flex max-w-[1440px] h-[340px] overflow-x-scroll croll-y-none  gap-5 my-[30px]">
                     {
                         cards.map((item) => (
-                <motion.div  key={item.id} className="" transition={{duration: 1}} variants={
+                <motion.div
+                    key={item.id} className="z-10 mt-[20px] hover:scale-110 transition duration-500" transition={{duration: item.id * 0.2 }} variants={
                     {
                         hidden: {
                             opacity: 0,
-                            x: -200,
+                            y: 300,
                         },
                         show: {
                             opacity: 1,
-                            x: 0,
+                            y: 0,
+                            animation: "spring(1, 80, 10, 0)",
                         }
                     }
-                }>
-                            <div className="min-w-[400px] h-[600px] bg-cover bg-center items-center">
-                                <Image className="rounded-2xl min-w-full min-h-[600px] object-center object-cover" width={400} height={600} src={item.image} alt={item.category}/>
+                }
+                   initial="hidden" whileInView="show" exit="hidden"
+                >
+                            <div className="bg-cover bg-center items-center">
+                                <Image className="rounded-2xl w-[250px] cursor-pointer h-[300px]   object-center object-cover" width={200} height={300} src={item.image} alt={item.category}/>
                             </div>
                 </motion.div>
                         ))

@@ -89,7 +89,6 @@ export default function FlashSale() {
                         ))
                     }
             </div>
-
         </main>
     );
 }

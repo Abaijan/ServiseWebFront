@@ -64,7 +64,7 @@ export default function FlashSale() {
            </motion.div>
             <div className="flex max-w-[1440px] h-[340px] overflow-x-scroll croll-y-none  gap-5 my-[30px]">
                     {
-                        cards.map((item) => (
+                        cards.map((item: CardProps) => (
                 <motion.div
                     key={item.id} className="z-10 mt-[20px]  hover:scale-110 transition duration-500" transition={{duration: item.id * 0.2 }} variants={
                     {

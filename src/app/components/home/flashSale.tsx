@@ -1,46 +1,20 @@
 'use client';
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Image from 'next/image';
-
+import React, {useState} from "react";
 interface CardProps {
     id: number;
     category: string;
     image: string;
     title: string;
 }
- const cards : CardProps[] = [
-     {
-         id: 1,
-         category: "Mens Clothing",
-         image: "/images/home/mens.png.webp",
-         title: "New Arrivals",
-     },
-     {
-         id: 2,
-         category: "Womens Clothing",
-         image: "/images/home/womens.jpg",
-         title: "New Arrivals",
-     },
-     {
-         id: 3,
-         category: "Kids Clothing",
-         image: "/images/home/kids.jpg",
-         title: "New Arrivals",
-     },
-     {
-         id:4,
-         category: "Accessories",
-         image: "/images/home/assecories.png",
-         title: "New Arrivals",
-     },
-     {
-         id: 5,
-         category: "Shoes",
-         image: "/images/home/men-nike-sports-shoes.jpeg",
-         title: "New Arrivals",
-     }
- ]
+
+async function getData() {
+    return await fetch(process.env.NEXT_PUBLIC_SERVER_HOST + '/mainPageCards', { method: 'GET'}).then((res) => res.json())
+}
 export default function FlashSale() {
+    const [cards, setCards] = React.useState<CardProps[]>([]);
+    getData().then((cards) => setCards(cards));
     return (
         <main className="flex h-[100vh]  flex-col items-center justify-center p-24">
            <motion.div transition={{duration : 1}} variants={
@@ -64,9 +38,9 @@ export default function FlashSale() {
            </motion.div>
             <div className="flex max-w-[1440px] h-[340px] overflow-x-scroll croll-y-none  gap-5 my-[30px]">
                     {
-                        cards.map((item: CardProps) => (
+                        cards.map((item: CardProps, index : number) => (
                 <motion.div
-                    key={item.id} className="z-10 mt-[20px]  hover:scale-110 transition duration-500" transition={{duration: item.id * 0.2 }} variants={
+                    key={index} className="z-10 mt-[20px]  hover:scale-110 transition duration-500" transition={{duration: index * 0.2 }} variants={
                     {
                         hidden: {
                             opacity: 0,
